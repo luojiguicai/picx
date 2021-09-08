@@ -41,7 +41,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         '/purge': {
           target: 'https://purge.jsdelivr.net',
           changeOrigin: true,
-          secure: true,
+          secure: false,
           rewrite: (path) => path.replace('^/purge', '/')
         }
       }
