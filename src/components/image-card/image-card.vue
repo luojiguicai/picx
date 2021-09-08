@@ -137,8 +137,8 @@ export default defineComponent({
       ) {
         const tempTimeout = setTimeout(() => {
           axios
-            .get(`/purge/gh/${owner}/${selectedRepos}@${selectedBranch}/${path}`, {
-              baseURL: ''
+            .get(`/gh/${owner}/${selectedRepos}@${selectedBranch}/${path}`, {
+              baseURL: 'https://purge.jsdelivr.net'
             })
             .then((res) => {
               console.log('[purge jsDelivr] ', res)
